@@ -1,0 +1,28 @@
+ASP.NET Core MVC Framework with EF Core Using .NET8 (Code First Approach)
+(WITH MVC Controller with Views using Entity Framework)
+link: https://www.youtube.com/watch?v=_uSw8sh7xKs&t=127s
+
+		
+Step-1: Create Model ex: Student and write Attributes property.
+
+Step-2: Add new MVC Controller with Views using Entity Framework
+			-- select model class ex: student
+			-- create a new dbContext class by pressing + button
+			-- name the dbContext as ex: StudentInfo_with_scaffolding.Data.AppDbContext
+			-- Database Provider SQl Server
+			-- Controller Name let remain same.
+			-- 2 packages will automatically added
+					i)  Microsoft.EntityFrameworkCore.SqlServer
+					ii) Microsoft.EntityFrameworkCore.Tools
+			-- A folder named Students will created in View folder.
+
+Step-3: Then run 2 command in Package Manager Console:
+			i)  Add-Migration "Initial Migration"
+			ii) Update-Database
+			
+Step-4: change the server name and database name in ConnectionStrings in appsettings.json file.
+		  "ConnectionStrings": {
+			"DefaultConnection": "Server=DESKTOP-SC1LO7R;Database=StudentInfoWithScaffoldingDB;TrustServerCertificate=True;Trusted_Connection=True;MultipleActiveResultSets=true"
+		  }
+
+Step-5: then all crud operation.
